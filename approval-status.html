@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+<meta name="description" content="">
+<meta name="author" content="">
+<title>Approval Status</title>
+<!-- Stylesheets -->
+<link rel="stylesheet" href="css/normalize.css">
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/util.css">
+<link rel="stylesheet" href="css/gijgo.min.css">
+<link rel="stylesheet" href="css/bootstrap-glyphicons.min.css">
+<link rel="stylesheet" href="css/form-validator-theme-default.min.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/skin.css">
+<!--[if lt IE 9]>
+    <script src="js/html5shiv.min.js"></script>
+    <![endif]-->
+<!--[if lt IE 10]>
+    <script src="js/media.match.min.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+<script src="js/breakpoints.min.js"></script>
+<script>
+    Breakpoints();
+  </script>
+</head>
+<body>
+<!-- Header -->
+<header class="container-fluid">
+  <div class="row header-block">
+    <div class="col-6 col-sm-6 header-logo1"> <img src="images/healthcare-logo.png" width="189" height="59" class="img-fluid" alt="Community Acute Care Center" /> </div>
+    <div class="col-6 col-sm-6 header-logo2 head-opt">
+    	<div class="header-left"><img src="images/bank-logo.png"  class="img-fluid" style="text-align:left" alt="National Bank" /></div>
+       	<div class="header-right"><span>Adam Smith</span><img src="images/login.png"></div>
+       	<div style="clear:both;"></div>
+   	</div>
+  </div>
+</header>
+<!-- Main Container -->
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-xs-8 col-md-8 offset-md-2 page-block">
+      <!-- Navigation -->
+      <nav class="row">
+        <div class="col first-link "><a class="nav-links">Patient Information</a></div>
+        <div class="col second-link"><a class="nav-links">Guarantor Information</a></div>
+        <div class="col third-link active-link"><a class="nav-links">Approval Status</a></div>
+      </nav>
+      <div style="clear:both;"></div>
+      <!-- Heading and form content -->
+      <section class="row">
+        <div class="col-12 col-xs-9 col-md-9 offset-md-2 m-t-20 appstatus">
+          <h1 class="form-heading m-t-20">Application Conditionally Approved </h1>
+          <!-- Form Success or Error Alerts Start -->
+          <div class="imgSts"> <img src="images/national-bank-app.png"  class="img-fluid" style="text-align:left" alt="National Bank" /></div>
+          <div class="imgTxt imgM20">&dollar;7,000 <span class="crdLim">credit limit approved</span></div>
+		  <div class="imgTxt">&dollar;1,288.00 <span class="currvis">current visit estimate</span></div>
+			  <div id="wrap" class="alert alert-success alert-ins">
+				<img class="left" src="images/info.png"  />
+				<p class="inspCls"> Please instruct the guarantor/responsible party to check their email for instructions on completing the loan application</p>
+			  </div>
+         <div class="col-12 col-xs-2 col-md-2 offset-md-10"> <button type="submit" class="btn btn-subm" id="btnClose">CLOSE</button></div>
+		</div>
+      </section>
+    </div>
+  </div>
+</div>
+<!-- Footer -->
+<footer class="site-footer">
+  <div class="site-footer-legal">© All rights reserved 2018</div>
+  <div class="site-footer-right"> Powered by <img src="images/ivita-logo.png" class="img-fluid" width="186" height="60" alt="Powered by IVITA Financial" /> </div>
+</footer>
+<script src='js/jquery-3.3.1.slim.min.js'></script>
+<script src='js/bootstrap.min.js'></script>
+<script src='js/gijgo.min.js'></script>
+<script src="js/jquery.form-validator.min.js"></script>
+<script src="js/toggleDisabled.js"></script>
+<script src="js/date.js"></script>
+<script src="js/html5.js"></script>
+<script src="js/logic.js"></script>
+<script src="js/jsconf.js"></script>
+<script src='js/jquery.number.js'></script>
+<script src='js/custom.js'></script>
+</body>
+</html>

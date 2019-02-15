@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+<meta name="description" content="">
+<meta name="author" content="">
+<title>Login</title>
+<!-- Stylesheets -->
+<link rel="stylesheet" href="css/normalize.css">
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/util.css">
+<link rel="stylesheet" href="css/gijgo.min.css">
+<link rel="stylesheet" href="css/bootstrap-glyphicons.min.css">
+<link rel="stylesheet" href="css/form-validator-theme-default.min.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/skin.css">
+<!--[if lt IE 9]>
+    <script src="js/html5shiv.min.js"></script>
+    <![endif]-->
+<!--[if lt IE 10]>
+    <script src="js/media.match.min.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+<script src="js/breakpoints.min.js"></script>
+<script>
+    Breakpoints();
+  </script>
+</head>
+<body>
+<!-- Header -->
+<header class="container-fluid">
+  <div class="row header-block-main">
+    <div class="col-6 col-sm-6 header-logo1"> <img src="images/healthcare-logo.png" width="189" height="59" class="img-fluid" alt="Community Acute Care Center" /> </div>
+    <div class="col-6 col-sm-6 header-logo2-main"><img src="images/bank-logo.png" width="151" height="70" class="img-fluid" alt="National Bank" /> </div>
+  </div>
+</header>
+<!-- Registration form Section -->
+<section>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-xs-12 col-md-12">
+        <div class="row">
+          <div class="col-12 col-xs-12 col-md-12 m-t-20">
+            
+            <h1 class="form-heading m-t-40" style="border-bottom:none;">Welcome to National Hospital Registrar Portal</h1>
+             </div>
+             </div>
+            <div class="row">
+          	<div class="col-12 col-xs-8 col-md-8 offset-md-2 m-t-40 m-b-50"> 
+            <!-- Form Success or Error Alerts Start -->
+            	<div class="alert col-12 col-xs-8 col-md-8 offset-md-2 alert-success"> <strong>Success!</strong> </div>
+				<div class="alert col-12 col-xs-8 col-md-8 offset-md-2 alert-danger"> <strong>Invalid username and password!</strong> </div>
+            <!-- Form Success or Error Alerts End -->
+            <form action="/" method="post" id="login-portal" class="m-t-40 m-b-40 row login-portal form toggle-disabled" autocomplete="off" >
+              <div class="col-12 col-xs-10 col-md-10 offset-md-1">
+                
+                <div class="form-group form-group-reg">
+                  <label for="email" class="col-form-label login-text text-left w-full">Email ID</label>
+                  <input type="email" class="form-control login-input" name="email" data-validation="required email" required minlength="6" maxlength="256" data-validation-error-msg-container="#email-error" placeholder="john@example.com">
+                  <div id="email-error" class="error-block"></div>
+                </div>
+                
+                <div class=" form-group-reg form-icons-gly">
+                  <label for="password" class="col-form-label login-text text-left w-full">Password</label>
+                  <input type="password" class="form-control login-input" name="Password" id="password" data-validation="required"  minlength="6" maxlength="256"  data-validation-error-msg-container="#password-error" placeholder="XXXXXXXX" required>
+                  <span class="glyphicon glyphicon-eye-open glyphicon-align-center glyphicon-css"></span>
+                  <div id="password-error" class="password-block"></div>
+                </div>
+                
+               
+                
+                <div class=" m-b-20 btn-group-sm text-center">
+                  <button type="submit" class="btn btn-subm login-sub col-md-12 p-t-12  m-t-20" id="btnsubmit">SUBMIT</button>
+                </div>
+                <div class="col-sm-6 offset-md-6 offset-6 m-b-30">
+                	<div class="forget-pwd">
+                    	<a href="#">Forgot Password?</a>
+                    </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Footer -->
+<footer class="site-footer">
+  <div class="site-footer-legal">© All rights reserved 2018</div>
+  <div class="site-footer-right"> Powered by <img src="images/ivita-logo.png" class="img-fluid" width="186" height="60" alt="Powered by IVITA Financial" /> </div>
+</footer>
+<script src='js/jquery-3.3.1.slim.min.js'></script>
+<script src='js/bootstrap.min.js'></script>
+<script src='js/gijgo.min.js'></script>
+<script src="js/jquery.form-validator.min.js"></script>
+<script src="js/toggleDisabled.js"></script>
+<script src="js/date.js"></script>
+<script src="js/html5.js"></script>
+<script src='js/jquery.number.min.js'></script>
+<script src='js/custom.js'></script>
+</body>
+</html>

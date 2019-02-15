@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+<meta name="description" content="">
+<meta name="author" content="">
+<title>Guarantor Information</title>
+<!-- Stylesheets -->
+<link rel="stylesheet" href="css/normalize.css">
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/util.css">
+<link rel="stylesheet" href="css/gijgo.min.css">
+<link rel="stylesheet" href="css/bootstrap-glyphicons.min.css">
+<link rel="stylesheet" href="css/form-validator-theme-default.min.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/skin.css">
+<!--[if lt IE 9]>
+    <script src="js/html5shiv.min.js"></script>0
+    <![endif]-->
+<!--[if lt IE 10]>
+    <script src="js/media.match.min.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+<script src="js/breakpoints.min.js"></script>
+<script>
+    Breakpoints();
+  </script>
+</head>
+<body>
+<!-- Header -->
+<header class="container-fluid">
+  <div class="row header-block">
+    <div class="col-6 col-sm-6 header-logo1"> <img src="images/healthcare-logo.png" width="189" height="59" class="img-fluid" alt="Community Acute Care Center" /> </div>
+    <div class="col-6 col-sm-6 header-logo2 head-opt">
+    	<div class="header-left"><img src="images/bank-logo.png"  class="img-fluid" style="text-align:left" alt="National Bank" /></div>
+       	<div class="header-right"><span>Adam Smith</span><img src="images/login.png"></div>
+       	<div style="clear:both;"></div>
+   	</div>
+  </div>
+</header>
+<!-- Main Container -->
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-xs-8 col-md-8 offset-md-2 page-block">
+      <!-- Navigation -->
+      <nav class="row">
+        <div class="col first-link"><a class="nav-links">Patient Information</a></div>
+        <div class="col second-link active-link"><a class="nav-links">Guarantor Information</a></div>
+        <div class="col third-link"><a class="nav-links">Approval Status</a></div>
+      </nav>
+      <div style="clear:both;"></div>
+      <!-- Heading and form content -->
+      <section class="row">
+        <div class="col-12 col-xs-8 col-md-8 offset-md-2 m-t-20">
+          <h1 class="form-heading">Guarantor Information</h1>
+          <!-- Form Success or Error Alerts Start -->
+          <div class="alert alert-success"> <strong>Success!</strong> </div>
+          <div class="alert alert-danger"> <strong>Error!</strong> </div>
+          <!-- Form Success or Error Alerts End -->
+         <!-- Form Success or Error Alerts End -->
+            <form action="income-information.html" method="post" id="guarantorinfo" class="m-t-40 m-b-40 row toggle-disabled" autocomplete="off">
+            <!-- Left Column -->
+            <div class="col-sm-6">
+                <div class="form-group form-group-reg">
+    				<label for="guarantorfname" class="col-form-label text-left w-full">Guarantor First Name</label>
+    				<input type="text" class="form-control alphabetsonly" name="guarantorfname" data-validation="required custom" data-validation-regexp="^[A-Za-z]{2,50}$" data-validation-error-msg-custom="Please enter a valid first name" data-validation-error-msg-container="#guarantorfname-error" placeholder="Jane">
+    				<div id="guarantorfname-error" class="error-block"></div>
+				</div>
+                <div class="form-group form-group-reg">
+    				<label for="guarantorlname" class="col-form-label text-left w-full">Guarantor Last Name</label>
+    				<input type="text" class="form-control alphabetsonly" name="guarantorlname" data-validation="required custom" data-validation-regexp="^[A-Za-z]{2,50}$" data-validation-error-msg-custom="Please enter a valid last name" data-validation-error-msg-container="#guarantorlname-error" placeholder="Doe">
+    				<div id="guarantorlname-error" class="error-block"></div>
+				</div>
+                <div class="form-group form-group-reg">
+    				<label for="guarantordob" class="col-form-label text-left w-full">Date of Birth</label>
+    				<div class="row dobs">
+                        <div class="col-4 p-r-0"><select id="" class="form-control form-control-sm monthdropdown" data-validation="required gdobcheck" data-validation-error-msg-dobcheck="Guarantor must be over 18 years old" data-validation-error-msg-container="#dob-error">
+                        <option value="0" selected disabled>Month</option>
+                        </select> </div>
+                        <div class="col-4 p-r-5 p-l-5"><select id="" class="form-control form-control-sm daydropdown"
+                        data-validation="required gdobcheck" data-validation-error-msg-dobcheck="Guarantor must be over 18 years old" data-validation-error-msg-container="#dob-error">
+                        <option value="0" selected disabled>Date</option>
+                        </select> </div>
+      					<div class="col-4 p-l-0"><select id="" class="form-control form-control-sm yeardropdown" data-validation="required gdobcheck" data-validation-error-msg-dobcheck="Guarantor must be over 18 years old" data-validation-error-msg-container="#dob-error">
+                        <option value="0" selected disabled>Year</option></select> </div>
+                     </div>
+                     <div class="doberror text-left">
+              <span id="dob-error" class="help-block form-error"></span>
+               </div>
+    				
+				</div>
+                <div class="form-group form-group-reg">
+    				<label for="ssn" class="col-form-label text-left w-full">Social Security Number</label>
+    				<input id="ssn" type="text" class="form-control" name="ssn" data-validation="required custom"  data-validation-regexp="^[0-9-*]{11}$" maxlength="11" required data-validation-error-msg-custom="Please enter a valid SSN" data-validation-error-msg-container="#ssn-error" placeholder="XXX-XX-XXXX">
+    				<div id="ssn-error" class="error-block"></div>
+				</div>
+                <div class="form-group form-group-reg">
+                  	<label for="email" class="col-form-label text-left w-full">Email Address</label>
+                  	<input type="email" class="form-control" name="email" data-validation="required email" required minlength="6" maxlength="256" data-validation-error-msg-container="#email-error" placeholder="someone@example.com">
+                    <span id="error" style="display:none;color:red;">Wrong email</span>
+                	<div id="email-error" class="error-block"></div>
+                </div>
+                <div class="form-group form-group-reg">
+    				<label for="mobilenumber" class="col-form-label text-left w-full">Mobile Phone</label>
+    				<input type="text" class="form-control phoneval numbersonly" maxlength="13" name="mobilenumber" data-validation="required custom" data-validation-regexp="^\(?([0-9]{3})\)?[-]?([0-9]{3})[-]?([0-9]{4})$" required data-validation-error-msg-custom="Please enter a valid mobile phone number" data-validation-error-msg-container="#mobilenumber-error" placeholder="(XXX)XXX-XXXX">
+    				<div id="mobilenumber-error" class="error-block"></div>
+				</div>
+                
+              </div>
+            <!-- Right Column -->
+            <div class="col-sm-6">
+                <div class="form-group form-group-reg">
+    				<label for="addressmand" class="col-form-label text-left w-full">Address</label>
+    				<input type="text" class="form-control nospecialchar" name="addressmand" data-validation="required custom" data-validation-regexp="^[A-Za-z0-9\s]{1,256}$" data-validation-error-msg-custom="Please enter a valid address" data-validation-error-msg-container="#addressmand-error" placeholder="123 New Street">
+    				<div id="addressmand-error" class="error-block"></div>
+				</div>
+                <div class="form-group form-group-reg">
+    				<label for="addressopt" class="col-form-label text-left w-full nospecialchar">Address Line 2 (optional)</label>
+    				<input type="text" class="form-control nospecialchar" name="addressopt" data-validation="custom"  data-validation-regexp="^[A-Za-z0-9\s]{1,256}$" data-validation-error-msg-custom="Please enter a valid address" data-validation-error-msg-container="#addressopt-error" placeholder="123 New Street" data-validation-optional="true">
+					<div id="addressopt-error" class="error-block"></div>
+                </div>
+                <div class="form-group form-group-reg">
+    				<label for="city" class="col-form-label text-left w-full">City</label>
+    				<input type="text" class="form-control alphabetsonly" name="city" data-validation="required custom" data-validation-regexp="^[A-Za-z]{2,50}$" data-validation-error-msg-custom="Please enter a valid city" data-validation-error-msg-container="#city-error" placeholder="City">
+    				<div id="city-error" class="error-block"></div>
+				</div>
+                <div class="form-group form-group-reg">
+    				<label for="state" class="col-form-label text-left w-full">State</label>
+    				<select class="form-control" required name="state">
+                        <option value="" selected disabled>Select</option>
+                        <option value="AL">AL</option>
+                        <option value="AK">AK</option>
+                        <option value="AR">AR</option>	
+                        <option value="AZ">AZ</option>
+                        <option value="CA">CA</option>
+                        <option value="CO">CO</option>
+                        <option value="CT">CT</option>
+                        <option value="DC">DC</option>
+                        <option value="DE">DE</option>
+                        <option value="FL">FL</option>
+                        <option value="GA">GA</option>
+                        <option value="HI">HI</option>
+                        <option value="IA">IA</option>	
+                        <option value="ID">ID</option>
+                        <option value="IL">IL</option>
+                        <option value="IN">IN</option>
+                        <option value="KS">KS</option>
+                        <option value="KY">KY</option>
+                        <option value="LA">LA</option>
+                        <option value="MA">MA</option>
+                        <option value="MD">MD</option>
+                        <option value="ME">ME</option>
+                        <option value="MI">MI</option>
+                        <option value="MN">MN</option>
+                        <option value="MO">MO</option>	
+                        <option value="MS">MS</option>
+                        <option value="MT">MT</option>
+                        <option value="NC">NC</option>	
+                        <option value="NE">NE</option>
+                        <option value="NH">NH</option>
+                        <option value="NJ">NJ</option>
+                        <option value="NM">NM</option>			
+                        <option value="NV">NV</option>
+                        <option value="NY">NY</option>
+                        <option value="ND">ND</option>
+                        <option value="OH">OH</option>
+                        <option value="OK">OK</option>
+                        <option value="OR">OR</option>
+                        <option value="PA">PA</option>
+                        <option value="RI">RI</option>
+                        <option value="SC">SC</option>
+                        <option value="SD">SD</option>
+                        <option value="TN">TN</option>
+                        <option value="TX">TX</option>
+                        <option value="UT">UT</option>
+                        <option value="VT">VT</option>
+                        <option value="VA">VA</option>
+                        <option value="WA">WA</option>
+                        <option value="WI">WI</option>	
+                        <option value="WV">WV</option>
+                        <option value="WY">WY</option>
+				</select>	
+    				<div id="state-error" class="error-block"></div>
+				</div>
+				<div class="form-group form-group-reg">
+    				<label for="zipcode" class="col-form-label text-left w-full">ZIP</label>
+    				<input type="text" class="form-control numbersonly" maxlength="5" name="zipcode" required data-validation="required custom"  data-validation-regexp="^[0-9]{5}$" data-validation-error-msg-custom="Please enter a valid zipcode" data-validation-error-msg-container="#zipcode-error" placeholder="XXXXX">
+    				<div id="zipcode-error" class="error-block"></div>
+				</div>
+                <div class="form-group form-group-reg">
+    				<label for="homephone" class="col-form-label text-left w-full">Home Phone (optional)</label>
+                    <input type="text" class="form-control phoneval numbersonly" maxlength="13" name="homephone" data-validation="custom" data-validation-regexp="^\(?([0-9]{3})\)?[-]?([0-9]{3})[-]?([0-9]{4})$" data-validation-error-msg-custom="Please enter a valid home phone number" data-validation-error-msg-container="#homephone-error" placeholder="(XXX)XXX-XXXX" data-validation-optional="true">
+                    
+    				<div id="homephone-error" class="error-block"></div>
+				</div>
+            </div>
+            <div class="col-12 col-sm-12 row p-l-30">
+              		<div class="col-sm-12 form-group form-group-reg p-l-0">
+                       <label for="filedbank" class="col-form-label text-left w-full">Have you filed for bankruptcy in the last 3 months?</label>
+                        <label class="radio-inline">
+                            <input type="radio" name="filedbank" value="Yes" required data-validation-error-msg-container="#bruptancy-error">Yes<span class="checkmark"></span>
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" name="filedbank" value="No">No<span class="checkmark"></span>
+                        </label>
+                        <div id="bruptancy-error" class="error-block"></div>
+    				</div> 
+			</div>
+            <div class="col-12 col-sm-12 row p-l-30">
+              		<div class="col-sm-12 form-group form-group-reg p-l-0">
+                       <label for="dependentspouse" class="col-form-label text-left w-full">Are you an active member of the military or the spouse/dependent of an active military member?</label>
+                        <label class="radio-inline">
+                            <input type="radio" name="dependentspouse" value="Yes" required data-validation-error-msg-container="#dependentspouse-error">Yes<span class="checkmark"></span>
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" name="dependentspouse" value="No">No<span class="checkmark"></span>
+                        </label>
+                        <div id="dependentspouse-error" class="error-block "></div>
+    				</div> 
+			</div>
+          
+              	<div class="col-6 col-sm-6 offset-6 ">
+             		<div class="form-group btn-group-sm text-right">
+			  		<input type="checkbox" name="verifyCheck" id="verifyCheck" required value="" /> I verified the information
+					</div>
+                </div>
+           
+            <div class="col-6 col-sm-6 p-t-10">
+                <div class="form-group btn-group-sm text-left">
+                <button type="button" class="btn btn-subm" onClick="location.href = 'patient-information.html';"><span class="glyphicon glyphicon-triangle-left"></span> Back</button>
+              </div>
+              </div>
+            <div class="col-6 col-sm-6 p-t-10">
+                <div class="form-group btn-group-sm text-right">
+                <button type="submit" class="btn btn-subm" id="btnsubmit">Next <span class="glyphicon glyphicon-triangle-right"></span></button>
+              </div>
+              </div>
+          </form>
+        </div>
+      </section>
+    </div>
+  </div>
+</div>
+<!-- Footer -->
+<footer class="site-footer">
+  <div class="site-footer-legal">© All rights reserved 2018</div>
+  <div class="site-footer-right"> Powered by <img src="images/ivita-logo.png" class="img-fluid" width="186" height="60" alt="Powered by IVITA Financial" /> </div>
+</footer>
+<script src='js/jquery-3.3.1.slim.min.js'></script>
+<script src='js/bootstrap.min.js'></script>
+<script src='js/gijgo.min.js'></script>
+<script src="js/jquery.form-validator.min.js"></script>
+<script src="js/toggleDisabled.js"></script>
+<script src="js/date.js"></script>
+<script src="js/html5.js"></script>
+<script src="js/logic.js"></script>
+<script src="js/jsconf.js"></script>
+<script src='js/jquery.number.js'></script>
+<script src='js/custom.js'></script>
+
+</body>
+</html>

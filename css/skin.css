@@ -1,0 +1,236 @@
+@charset "utf-8";
+/* CSS Document */
+@font-face { 
+	font-family: 'openSansReg'; 
+	src: url('../fonts/OpenSans-Regular.ttf') format('truetype'); 
+	font-weight: normal; font-style: normal;
+}
+body {	color: #76838f;
+		font-family:'openSansReg'; 
+		font-size:100%;
+		}
+
+		
+.header-logo1 {
+	background: #ffffff url(../images/header-bg-stripe.png) top right no-repeat;
+}
+.first-link {
+	background: url(../images/first-link.png) center 10px no-repeat;
+}
+.second-link {
+	background: url(../images/second-link.png) center 10px no-repeat;
+}
+.third-link {
+	background: url(../images/third-link.png) center 10px no-repeat;
+}
+.fourth-link {
+	background: url(../images/fourth-link.png) center 10px no-repeat;
+}
+.fifth-link {
+	background: url(../images/fifth-link.png) center 10px no-repeat;
+}
+/*.first-link:hover {
+	background: #fffaed url(../images/first-link.png) center 10px no-repeat;
+}
+.second-link:hover {
+	background: #fffaed url(../images/second-link.png) center 10px no-repeat;
+}
+.third-link:hover {
+	background: #fffaed url(../images/third-link.png) center 10px no-repeat;
+}
+.fourth-link:hover {
+	background: #fffaed url(../images/fourth-link.png) center 10px no-repeat;
+}
+.fifth-link:hover {
+	background: #fffaed url(../images/fifth-link.png) center 10px no-repeat;
+}*/
+@font-face {
+ font-family: 'AGENCYR';
+src: url('../fonts/AGENCYR.eot');
+src: local('AGENCYR'), url('../fonts/AGENCYR.woff') format('woff'), url('../fonts/AGENCYR.ttf') format('truetype');
+}
+
+.site-footer {background-color: #9ddcff;}
+.header-block {border-bottom:1px solid #0070ad;}
+.header-block-main {border-bottom:1px solid #0070ad; background:#0070ad;}
+.header-logo2 {background:#0070ad !important;}
+.header-logo2-main {background:#0070ad !important;}
+.page-block {background:#f5f5f5;}
+.active-link {background-color: #fffaed}
+.active-link .nav-links {
+background:#0070ad;
+	color:#ffffff !important;
+	font-size:85%;
+}
+.nav-links {	font-size:85%;}
+/*.nav-links:hover {
+	background:#0070ad;
+	color:#ffffff !important;
+	font-size:85%;
+}*/
+.form-heading {
+	font-family: 'AGENCYR' !important;
+	font-style:normal;
+	font-weight:400;
+	font-size:300%;
+	color:#0070ad;
+	border-bottom:2px solid #0070ad;
+}
+.form-group {
+	font-size:90%;
+	color:#414141;
+	margin-top: 18px;
+}
+.checkmark { background-color: #FFF;  border: 2px solid #000;}
+/* On mouse-over, add a grey background color */
+.radio-inline:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.radio-inline input:checked ~ .checkmark {
+    background-color: #2196F3;
+}
+
+.btn-subm {
+	color:#fff;
+	background-color:#0070ad;
+	border-color:#1a5b7f
+}
+.btn-subm:hover {
+	color:#fff;
+	background-color:#3383af;
+	border-color:#1a5b7f
+}
+.btn-subm.focus, .btn-subm:focus {
+box-shadow:0 0 0 .2rem rgba(23, 162, 184, .5)
+}
+
+.btn-subm:disabled{
+    background-color: #636363;
+	border-color:#636363;
+}
+.btn-arrow-right::before, .btn-arrow-left::after {
+background-color: #f5f5f5;
+}
+.notes {
+	font-size:90%;
+	}
+.switch {
+	background: linear-gradient(to bottom, #eeeeee, #FFFFFF 25px);
+	background-image: -webkit-linear-gradient(top, #eeeeee, #FFFFFF 25px);
+	box-shadow: inset 0 -1px white, inset 0 1px 1px rgba(0, 0, 0, 0.05);
+}
+.switch-input:checked ~ .switch-label {
+background: #E1B42B;
+box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.15), inset 0 0 3px rgba(0, 0, 0, 0.2);
+}
+.switch-label {
+	font-size: 10px;
+	text-transform: uppercase;
+	background: #eceeef;
+	box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.12), inset 0 0 2px rgba(0, 0, 0, 0.15);
+}
+.switch-left-right .switch-input:checked ~ .switch-label:before {
+opacity: 1;
+}
+.switch-input:checked ~ .switch-label:before {
+opacity: 0;
+}
+.switch-left-right .switch-label:before {
+	background: #0070ad;
+	color:#ffffff;
+}
+.switch-left-right .switch-label:before, .switch-left-right .switch-label:after {
+	text-indent: -12px;
+	box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.2), inset 0 0 3px rgba(0, 0, 0, 0.1);
+}
+.switch-input:checked ~ .switch-label:after {
+ opacity: 1;
+}
+.switch-label:before {
+	color: #aaaaaa;
+	text-shadow: 0 1px rgba(255, 255, 255, 0.5);
+}
+span.switch-label:after {
+	color: #FFFFFF;
+	text-shadow: 0 1px rgba(0, 0, 0, 0.2);
+}
+.switch-left-right .switch-label:after {
+	text-indent: 9px;
+	background: #d2d2d2!important;
+	color:#333333;
+}
+.switch-left-right .switch-label:before, .switch-left-right .switch-label:after {
+	box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.2), inset 0 0 3px rgba(0, 0, 0, 0.1);
+}
+.switch-input:checked ~ .switch-handle {
+	 box-shadow: -1px 1px 5px rgba(0, 0, 0, 0.2);
+}
+.switch-handle {
+	background: linear-gradient(to bottom, #FFFFFF 40%, #f0f0f0);
+	background-image: -webkit-linear-gradient(top, #FFFFFF 40%, #f0f0f0);
+	box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+}
+.switch-handle:before {
+	background: linear-gradient(to bottom, #eeeeee, #FFFFFF);
+	background-image: -webkit-linear-gradient(top, #eeeeee, #FFFFFF);
+	box-shadow: inset 0 1px rgba(0, 0, 0, 0.02);
+}
+.notes-text{
+	font-size:11px;
+	font-weight:500;
+	color:#585858;
+}
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+	body{ font-family:"Open Sans" !important;
+	}
+}
+@media (min-width: 1025px) and (max-width: 1280px) {
+.nav-links, .active-link .nav-links, .nav-links:hover {font-size:80%;}
+}
+@media (min-width: 768px) and (max-width: 1024px) { 
+.nav-links, .active-link .nav-links, .nav-links:hover {font-size:100%;}
+}
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+.nav-links, .active-link .nav-links, .nav-links:hover {font-size:80%;}
+}
+@media (max-width:600px) {
+.header-block {
+	border-bottom:1px solid #0070ad;
+	background:#0070ad;
+}
+.first-link, .second-link, .third-link, .fourth-link, .fifth-link, .first-link:hover, .second-link:hover, .third-link:hover, .fourth-link:hover, .fifth-link:hover {
+    background-size: 56px;
+}
+}
+@media (max-width:479px) {
+.header-block {
+	border-bottom:1px solid #0070ad;
+	background:#0070ad
+}
+.header-logo1 {
+background: #ffffff url(../images/header-bg-stripe-small.png) top right no-repeat;
+}
+.page-block {
+background:#f5f5f5;
+}
+.nav-links {
+	font-size:12px;
+	line-height:14px;
+}
+.active-link .nav-links {
+    font-size: 12px;
+}
+.form-heading {
+font-size:150%;
+}
+.notes {
+font-size:75%
+}
+.site-footer-legal, .site-footer-right {
+	font-size:80%;
+}
+
+}
+

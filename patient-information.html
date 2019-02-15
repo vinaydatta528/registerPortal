@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+<meta name="description" content="">
+<meta name="author" content="">
+<title>Patient Information</title>
+<!-- Stylesheets -->
+<link rel="stylesheet" href="css/normalize.css">
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/util.css">
+<link rel="stylesheet" href="css/gijgo.min.css">
+<link rel="stylesheet" href="css/bootstrap-glyphicons.min.css">
+<link rel="stylesheet" href="css/form-validator-theme-default.min.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/skin.css">
+<!--[if lt IE 9]>
+    <script src="js/html5shiv.min.js"></script>
+    <![endif]-->
+<!--[if lt IE 10]>
+    <script src="js/media.match.min.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+<script src="js/breakpoints.min.js"></script>
+<script>
+    Breakpoints();
+  </script>
+</head>
+<body>
+<!-- Header -->
+<header class="container-fluid">
+  <div class="row header-block">
+    <div class="col-6 col-sm-6 header-logo1"> <img src="images/healthcare-logo.png" width="189" height="59" class="img-fluid" alt="Community Acute Care Center" /> </div>
+    <div class="col-6 col-sm-6 header-logo2 head-opt">
+    	<div class="header-left"><img src="images/bank-logo.png"  class="img-fluid" style="text-align:left" alt="National Bank" /></div>
+       	<div class="dropdown">
+			 <a data-target="#" href="#" data-toggle="dropdown" class="dropdown-toggle" onclick="toggleMenu()">
+			     <span class="profName">Adam Smith</span><img src="images/login.png"></a>
+				<ul id="menu-box" style="display:none">
+				   <span class="menu-dwnbtn"><img src="images/arrow_down.png" /></span>
+					<li><a href="#">Profile Management</a></li>
+					<li><a href="#">Logout</a></li>
+				</ul>
+		</div>
+       	<div style="clear:both;"></div>
+   	</div>
+  </div>
+</header>
+<!-- Main Container -->
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-xs-8 col-md-8 offset-md-2 page-block">
+      <!-- Navigation -->
+      <nav class="row">
+        <div class="col first-link active-link"><a class="nav-links">Patient Information</a></div>
+        <div class="col second-link"><a class="nav-links">Guarantor Information</a></div>
+        <div class="col third-link"><a class="nav-links">Approval Status</a></div>
+      </nav>
+      <div style="clear:both;"></div>
+      <!-- Heading and form content -->
+      <section class="row">
+        <div class="col-12 col-xs-8 col-md-8 offset-md-2 m-t-20">
+          <h1 class="form-heading">Patient Information </h1>
+          <!-- Form Success or Error Alerts Start -->
+          <div class="alert alert-success"> <strong>Success!</strong> </div>
+          <div class="alert alert-danger"> <strong>Error!</strong> </div>
+          <!-- Form Success or Error Alerts End -->
+          <form action="guarantor-information.html" method="post" id="pinformation" class="m-t-40 m-b-40 toggle-disabled" autocomplete="off">
+            <div class="form-group row form-group-tc">
+           
+              <label for="patientname" class="col-sm-4 col-form-label">Patient Name:</label>
+              <div class="col-sm-8">
+                  <input type="text" class="form-control alphabetsonly" name="patientname" data-validation="required custom" data-validation-regexp="^[A-Za-z\s]{5,101}$" data-validation-error-msg-custom="Please enter a valid patient name" data-validation-error-msg-container="#patientname-error" placeholder="John Doe">
+                  <div id="patientname-error"></div>
+              </div>
+               
+            </div>
+            <div class="form-group row form-group-tc">
+            
+              <label for="paccountnum" class="col-sm-4 col-form-label">Patient Account Number:</label>
+              <div class="col-sm-8">
+               <input type="text" class="form-control numbersonly" name="paccountnum" data-validation="required custom"  data-validation-regexp="^[0-9]{1,20}$" data-validation-error-msg-custom="Please enter a valid patient account number" data-validation-error-msg-container="#account-error">
+                <div id="account-error"></div>
+              </div>
+            </div>
+            <div class="form-group row form-group-tc">
+              <label for="hestimate" class="col-sm-4 col-form-label">Patient Responsibility:</label>
+              <div class="col-sm-8">
+               <div class="input-group"><div class="input-group-prepend"><span class="input-group-text">$</span></div>
+                  <input type="text" class="estimate form-control numbersonly" name="hestimate" maxlength="7" data-validation="required number"  data-validation-allowing="range[500;8000],float" data-validation-error-msg-number="Please enter a valid patient estimate" data-validation-error-msg-container="#estimate-error" placeholder="0.00" required>
+                  </div>
+                   <div id="estimate-error"></div>
+              </div>
+            </div>
+            <div class="form-group row form-group-tc">
+              <label for="pdob" class="col-sm-4 col-form-label">Patient Date of Birth:</label>
+              <div class="col-sm-8">
+               <!-- <input type="text" class="form-control dobpicker" name="pdateofbirth" data-validation="required custom" data-validation-regexp="(?:19|20)[0-9]{2}-(?:(?:0[1-9]|1[0-2])/(?:0[1-9]|1[0-9]|2[0-9])|(?:(?!02)(?:0[1-9]|1[0-2])/(?:30))|(?:(?:0[13578]|1[02])-31))" data-validation-error-msg-custom="Please enter a valid" data-validation-error-msg-container="#dob-error" placeholder="MM/DD/YYYY" >-->
+                     	<div class="row dobs">
+                        <div class="col-4"><select id="" class="form-control form-control-sm monthdropdown" data-validation="required" data-validation-error-msg-dobcheck="Please enter a valid date of birth" data-validation-error-msg-container="#dob-error">
+                        <option value="0" selected disabled>Month</option>
+                        </select> </div>
+                        <div class="col-4"><select id="" class="form-control form-control-sm daydropdown"
+                        data-validation="required" data-validation-error-msg-dobcheck="Please enter a valid date of birth" data-validation-error-msg-container="#dob-error">
+                        <option value="0" selected disabled>Date</option>
+                        </select> </div>
+      					<div class="col-4"><select id="" class="form-control form-control-sm yeardropdown" data-validation="required dobcheck"data-validation-error-msg-dobcheck="Please enter a valid date of birth" data-validation-error-msg-container="#dob-error">
+                        <option value="0" selected disabled>Year</option></select> </div>
+                        </div>
+              </div>
+            </div>
+            <div class="row">
+              	<div class="col-6 col-sm-6 offset-6 ">
+             		<div class="form-group btn-group-sm text-right">
+			  		<input type="checkbox" name="verifyCheck" id="verifyCheck" required value="" /> I verified the information
+					</div>
+                </div>
+              </div>
+            <div class="row">
+              <div class="col-6 col-sm-6">
+                <div class="form-group btn-group-sm text-left">
+                  <button type="button" class="btn btn-subm"></span> Back</button>
+                </div>
+              </div>
+              <div class="col-6 col-sm-6">
+                <div class="form-group btn-group-sm text-right">
+                  <button type="submit" class="btn btn-subm" id="btnsubmit">Next</button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </section>
+    </div>
+  </div>
+</div>
+<!-- Footer -->
+<footer class="site-footer">
+  <div class="site-footer-legal">© All rights reserved 2018</div>
+  <div class="site-footer-right"> Powered by <img src="images/ivita-logo.png" class="img-fluid" width="186" height="60" alt="Powered by IVITA Financial" /> </div>
+</footer>
+<script src='js/jquery-3.3.1.slim.min.js'></script>
+<script src='js/bootstrap.min.js'></script>
+<script src='js/gijgo.min.js'></script>
+<script src="js/jquery.form-validator.min.js"></script>
+<script src="js/toggleDisabled.js"></script>
+<script src="js/date.js"></script>
+<script src="js/html5.js"></script>
+<script src="js/logic.js"></script>
+<script src="js/jsconf.js"></script>
+<script src='js/jquery.number.js'></script>
+<script src='js/custom.js'></script>
+</body>
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+<meta name="description" content="">
+<meta name="author" content="">
+<title>Program Requirements</title>
+<!-- Stylesheets -->
+<link rel="stylesheet" href="css/normalize.css">
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/util.css">
+<link rel="stylesheet" href="css/gijgo.min.css">
+<link rel="stylesheet" href="css/bootstrap-glyphicons.min.css">
+<link rel="stylesheet" href="css/form-validator-theme-default.min.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/skin.css">
+<!--[if lt IE 9]>
+    <script src="js/html5shiv.min.js"></script>
+    <![endif]-->
+<!--[if lt IE 10]>
+    <script src="js/media.match.min.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+<script src="js/breakpoints.min.js"></script>
+<script>
+    Breakpoints();
+  </script>
+</head>
+<body>
+<!-- Header -->
+<header class="container-fluid">
+  <div class="row header-block-main">
+    <div class="col-6 col-sm-6 header-logo1"> <img src="images/healthcare-logo.png" width="189" height="59" class="img-fluid" alt="Community Acute Care Center" /> </div>
+    <div class="col-6 col-sm-6 header-logo2-main head-opt">
+    	<div class="header-left"><img src="images/bank-logo.png"  class="img-fluid" style="text-align:left" alt="National Bank" /></div>
+       	<div class="dropdown">
+			 <a data-target="#" href="#" data-toggle="dropdown" class="dropdown-toggle" onclick="toggleMenu()">
+			     <span class="profName">Adam Smith</span><img src="images/login.png"></a>
+				<ul id="menu-box" style="display:none">
+				   <span class="menu-dwnbtn"><img src="images/arrow_down.png" /></span>
+					<li><a href="#">Profile Management</a></li>
+					<li><a href="#">Logout</a></li>
+				</ul>
+		</div>
+       	<div style="clear:both;"></div>
+   	</div>
+  </div>
+</header>
+<!-- Registration form Section -->
+<section>
+  <div class="container-fluid">
+			 <div class="row">
+			   <div class="col-xs-12 col-md-12 ">
+				<div class="container"> 
+				  <div class="row">
+				  <h1 class="col-12 col-xs-12 col-md-12 form-heading m-t-40 prTitdiv">Program Requirements</h1>
+				  <div class="col-12 col-xs-12 col-md-12 prreqblck">
+					<div class="row">
+						<div class="col-md-7 col-12 col-xs-12 prLeftBlck">
+							<h3 class="col-12 col-xs-12 col-md-12 m-t-40 text-left" id="titHead" style="font-family: 'AGENCYR' !important;color:#4a4a4a;">
+							   <span class="headLimg"><img src="images/i-icon.png" class=""/></span>
+							   Required criteria to apply for the loan
+							 </h3>
+							 <ol class="infList">
+							  <li>Guarantor must be 18 years and older</li>
+							  <li>Patient Estimate should be more than $500.00 and less than $8000.00</li>
+							  <li>Guarantor with an Existing line of credit will not be eligible for a new application</li>
+							  <li>Minimum income should be no less than $24,000.00</li>
+							 </ol> 
+							<div class="col-md-12">
+								<h4 class="subHeadpr">Did they meet the above requirements?</h4>
+									 <div class="form-group form-group-reg" id="reqFrm">
+									   <input type="submit" class="yesbtn" id="yesbtn" name="sub-yes" value="YES" />
+									   <input type="submit" class="nobtn" id="nobtn" name="sub-no" value="NO" />
+									 </div>
+							</div>
+						</div>
+						<div class="prborderline"></div>
+						<div class="col-md-4 col-12 col-xs-12 prRightBlck prOpacity">
+						<form name="prform" id="prform" autocomplete="off">
+							<div class="form-group form-group-reg" >
+							  <label for="email" class="col-form-label login-text text-left w-full">Email Address</label>
+							  <input type="email" class="form-control" name="email" id="emailid" data-validation="required email" required minlength="6" maxlength="256" data-validation-error-msg-container="#email-error" placeholder="someone@example.com">
+                              <div id="email-error" class="error-block"></div>
+							</div>
+							<div class="form-group-reg form-icons-gly">
+							  <label for="haccount-error" class="col-form-label login-text text-left w-full">Hospital Account Number</label>
+							  <input type="text" class="form-control numbersonly" name="haccountnum" id="accnum" data-validation="required custom"  data-validation-regexp="^[0-9]{1,20}$" data-validation-error-msg-custom="Please enter a valid hospital account number" data-validation-error-msg-container="#haccount-error" placeholder="XXXXXXXX">
+							  <div id="haccount-error" class="haccount-error"></div>
+							</div>
+							<div class="m-b-20 btn-group-sm text-center">
+							  <button type="submit" class="btn btn-subm login-sub col-md-12 p-t-12  m-t-20" id="btnsubmit">SUBMIT</button>
+							</div>
+							</form>
+						</div>
+					</div>
+                  </div>
+                    <div class="alertDiv">
+                        <div class="row">
+                           <div class="col-md-10">
+                                <div class="alert alert-danger  profiles-error titDisp">
+                                    <img src="images/bad_account.png">
+                                    <p>Guarantor must meet to requirements to proceed further</p>
+                                    <span class="closeAlert">X</span>
+                                </div>
+                           </div>
+                        </div>
+                    </div>
+                    <!--Alert div when user does not exist for server side code-->
+                    <div class="alertloc">
+                        <div class="row">
+                           <div class="col-md-10">
+                                <div class="alert alert-danger  profiles-error titDisp1">
+                                    <img src="images/bad_account.png">
+                                    <p>Line of credit already exists for this email address &nbsp; <b>Call 1 800-000-000</b></p>
+                                    <span class="closeAlert1">X</span>
+                                </div>
+                           </div>
+                        </div>
+                    </div>
+				</div>
+           	</div>
+		   </div>
+      </div>
+	</div>
+</section>
+<!-- Footer -->
+<footer class="site-footer">
+  <div class="site-footer-legal">© All rights reserved 2018</div>
+  <div class="site-footer-right"> Powered by <img src="images/ivita-logo.png" class="img-fluid" width="186" height="60" alt="Powered by IVITA Financial" /> </div>
+</footer>
+<script src='js/jquery-3.3.1.slim.min.js'></script>
+<script src='js/bootstrap.min.js'></script>
+<script src='js/gijgo.min.js'></script>
+<script src="js/jquery.form-validator.min.js"></script>
+<script src="js/toggleDisabled.js"></script>
+<script src="js/date.js"></script>
+<script src="js/html5.js"></script>
+<script src='js/jquery.number.min.js'></script>
+<script src='js/custom.js'></script>
+</body>
+</html>
