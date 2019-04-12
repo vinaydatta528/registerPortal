@@ -1,9 +1,8 @@
 @charset "utf-8";
 /* CSS Document */
-
+html{ height:100%; }
 body {
-	margin: 0;
-	text-align: left;
+	min-height:100%; padding:0; margin:0; position:relative; 
 }
 .header-block {
 	border-bottom:1px solid #0070ad;
@@ -457,6 +456,7 @@ input[type=text]::-ms-clear,input[type=password]::-ms-clear,input[type=email]::-
 .header-left{
 	float:left;
 	text-align:left;
+	width:145px;
 }
 .header-right{
 	float:right;
@@ -783,7 +783,7 @@ height:auto;
 }
 @media (max-width:767px) {
 .header-logo1 {
-    padding: 20px 3px 0px 20px;
+   padding: 20px 16px 0px 4px;
 }
 .nav-links { width:100%;}
 .profName{display:none;}

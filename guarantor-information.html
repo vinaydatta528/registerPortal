@@ -34,8 +34,16 @@
   <div class="row header-block">
     <div class="col-6 col-sm-6 header-logo1"> <img src="images/healthcare-logo.png" width="189" height="59" class="img-fluid" alt="Community Acute Care Center" /> </div>
     <div class="col-6 col-sm-6 header-logo2 head-opt">
-    	<div class="header-left"><img src="images/bank-logo.png"  class="img-fluid" style="text-align:left" alt="National Bank" /></div>
-       	<div class="header-right"><span>Adam Smith</span><img src="images/login.png"></div>
+    	<div class="header-left"><img src="images/bank-logo.png"  class="img-fluid"  style="text-align:left" alt="National Bank" /></div>
+       	<div class="dropdown">
+			 <a data-target="#" href="#" data-toggle="dropdown" class="dropdown-toggle" onclick="toggleMenu()">
+			     <span class="profName">Adam Smith</span><img src="images/login.png"></a>
+				<ul id="menu-box" style="display:none">
+				   <span class="menu-dwnbtn"><img src="images/arrow_down.png" /></span>
+					<li><a href="#">Profile Management</a></li>
+					<li><a href="#">Logout</a></li>
+				</ul>
+		</div>
        	<div style="clear:both;"></div>
    	</div>
   </div>
